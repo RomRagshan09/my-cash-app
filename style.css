@@ -2,139 +2,562 @@
     box-sizing: border-box;
 }
 
+
 body {
+
     margin: 0;
-    font-family: Arial, sans-serif;
+
+    font-family:
+        Arial,
+        sans-serif;
+
     background: #f4f6f8;
+
     color: #222;
 }
 
+
 .app {
-    max-width: 600px;
+
+    max-width: 700px;
+
     margin: auto;
-    padding: 20px;
+
+    padding: 25px 20px 50px;
 }
+
+
+
+/* HEADER */
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
 }
+
 
 header h1 {
-    margin-bottom: 5px;
+
+    margin: 0 0 5px;
+
+    font-size: 28px;
 }
+
 
 header p {
+
+    margin: 0;
+
     color: #777;
 }
+
+
+.refresh-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,0.08);
+}
+
+
+
+/* BALANCE */
 
 .balance-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
+
+    background: #222;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
     text-align: center;
+
     margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.12);
 }
+
 
 .balance-card p {
+
     margin: 0;
-    color: #777;
+
+    opacity: 0.7;
 }
+
 
 .balance-card h2 {
+
     margin: 10px 0 0;
-    font-size: 32px;
+
+    font-size: 34px;
 }
+
+
+
+/* SUMMARY */
 
 .summary {
+
     display: flex;
+
     gap: 15px;
+
     margin-bottom: 20px;
 }
+
 
 .summary-card {
+
     background: white;
+
     flex: 1;
+
     padding: 18px;
+
     border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,0.08);
 }
+
+
+.summary-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    background: #eee;
+}
+
 
 .summary-card p {
-    margin: 0 0 8px;
+
+    margin: 0 0 5px;
+
     color: #777;
+
+    font-size: 14px;
 }
+
 
 .summary-card h3 {
+
     margin: 0;
+
+    font-size: 18px;
 }
+
+
+
+/* FORM */
 
 .transaction-form {
+
     background: white;
+
     padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
 
-.transaction-form h2 {
-    margin-top: 0;
-}
+    border-radius: 18px;
 
-.type-buttons {
-    display: flex;
-    gap: 10px;
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,0.08);
+
     margin-bottom: 20px;
 }
 
+
+.transaction-form h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* TYPE BUTTONS */
+
+.type-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
 .type-buttons button {
+
     flex: 1;
-    padding: 12px;
+
+    padding: 13px;
+
     border: none;
-    border-radius: 8px;
+
+    border-radius: 9px;
+
     cursor: pointer;
+
     background: #eee;
+
     font-size: 16px;
 }
 
+
 .type-buttons button.active {
+
     background: #222;
+
     color: white;
 }
 
+
+
+/* INPUTS */
+
 label {
+
     display: block;
+
     margin-top: 15px;
+
     margin-bottom: 6px;
+
     font-weight: bold;
+
+    font-size: 14px;
 }
+
 
 input,
 select {
+
     width: 100%;
-    padding: 12px;
+
+    padding: 13px;
+
     border: 1px solid #ddd;
-    border-radius: 8px;
+
+    border-radius: 9px;
+
     font-size: 16px;
+
+    background: white;
 }
 
+
+input:focus,
+select:focus {
+
+    outline: none;
+
+    border-color: #222;
+}
+
+
+
+/* SAVE */
+
 .save-button {
+
     width: 100%;
+
     margin-top: 25px;
+
     padding: 14px;
+
     border: none;
-    border-radius: 8px;
+
+    border-radius: 9px;
+
     background: #222;
+
     color: white;
+
     font-size: 16px;
+
+    font-weight: bold;
+
     cursor: pointer;
 }
 
+
 .save-button:hover {
+
     opacity: 0.85;
 }
 
+
 #message {
+
     text-align: center;
-    margin-top: 15px;
+
+    margin: 15px 0 0;
+
+    min-height: 20px;
+}
+
+
+
+/* HISTORY */
+
+.history {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,0.08);
+}
+
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.history-header h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+#transactionCount {
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+
+/* TRANSACTION */
+
+.transaction {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+    gap: 10px;
+}
+
+
+.transaction:last-child {
+
+    border-bottom: none;
+}
+
+
+.transaction-info {
+
+    min-width: 0;
+}
+
+
+.transaction-description {
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+    word-break: break-word;
+}
+
+
+.transaction-meta {
+
+    font-size: 13px;
+
+    color: #888;
+}
+
+
+.transaction-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.transaction-amount {
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.income-amount {
+
+    color: #16834a;
+}
+
+
+.expense-amount {
+
+    color: #c0392b;
+}
+
+
+.delete-button {
+
+    border: none;
+
+    background: #f1f1f1;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.delete-button:hover {
+
+    background: #ddd;
+}
+
+
+
+/* EMPTY */
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 30px 10px;
+
+    color: #888;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .app {
+
+        padding: 20px 15px 40px;
+    }
+
+
+    header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .balance-card h2 {
+
+        font-size: 28px;
+    }
+
+
+    .summary {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .transaction-form,
+    .history {
+
+        padding: 20px;
+    }
+
+
+    .transaction {
+
+        align-items: flex-start;
+    }
+
+
+    .transaction-right {
+
+        flex-direction: column;
+
+        align-items: flex-end;
+
+        gap: 5px;
+    }
+
 }
