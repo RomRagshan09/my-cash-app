@@ -1,5 +1,5 @@
 const SCRIPT_URL =
-    "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnRx-q16VoMdn2I7_6bDvZ9bAI3TWsABs4bFnkLbwl39yn_TA_1hX-_QvsYeCtNeeN5tNtyNxD8zoLA_AaTzXdYVN9HExW2wRMhItkzXZyoAWhfDNgu-M3xPwnJiVIq8FZPOUiTjbCBLuwEMYl6yueQPnW5-PWmC2LM-OtjYzhvJSkWMeGAqTEU3x6trWMqPe7GH343Jo0PttCiHp19v2kuI7ppnjUtF6mUHLW-7tRYVRxHDJiKMrH9zngw4iLIpWV9so2Tab4o7t37nhTmobDLdgxeBZg&lib=MPJKpQ1BiZuTczTGWPAN9lBj_FdURCWWA";
+    "https://script.google.com/macros/s/AKfycbw7qUMGP-58yoXySzM1e9CiaiNFiIPnBIfukuTee4rv8mN4LLWqZjmg4hNXblUGpfv1/exec";
 
 let transactionType = "income";
 
